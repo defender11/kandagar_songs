@@ -10,3 +10,5 @@
 /_htaccess
 /test.txt
 /test.txt~
+/application/config/config.php
+/application/config/database.php
