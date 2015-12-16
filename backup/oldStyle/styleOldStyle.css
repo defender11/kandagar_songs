@@ -1,0 +1,539 @@
+@import "helps.css";
+/*  SYSTEM */
+    * {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        border: none;
+    }
+    body {
+        /*background: #EEEFEC ;*/
+        box-shadow: 0px 0px 404px 457px #333 inset;
+        background: #F9FF00 none repeat scroll 0% 0%;
+    }
+    .ui-widget { font-size: 0.8em!important; }
+    .ui-datepicker-trigger {
+        display: block;
+        position: absolute;
+        right: 427px;
+        margin-top: -22px;
+        cursor: pointer;
+    }
+    .dBlock {
+        display: block;
+        margin-bottom: 5px;
+        float: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        /*width: 250px;*/
+        width: 90%;
+        padding-bottom: 7px;
+        border-bottom: 1px solid #697A7E;
+        /*border-bottom: 1px solid rgb(97, 150, 179);*/
+    }
+/*  END SYSTEM */
+
+    .box,
+    .boxChat,
+    .boxControl,
+    .boxSend,
+    .boxFooter {
+        display: block;
+        position: relative;
+        width: 970px;
+        margin: 0 auto;
+    }
+
+    .box { }
+    .boxHeaderTxt i {
+        color: rgb(236, 189, 26);
+    }
+    .boxHeaderTxt {
+        text-align: center;
+        margin-top: 10px;
+        font-family: Tahoma;
+        text-shadow: 0px 3px 2px #333;
+        color: #1BABFB;
+    }
+    .boxChat {
+        margin: 10px auto 20px;
+        display: block;
+        position: relative;
+        width: 800px;
+        height: auto;
+        padding-top: 0px;
+        /*box-shadow: 0px 23px 22px -25px #000;*/
+        overflow: hidden;
+    }
+    /*.boxChat {*/
+        /*margin: 0px auto;*/
+        /*display: block;*/
+        /*position: relative;*/
+        /*width: 650px;*/
+        /*height: 350px;*/
+        /*overflow-y: auto;*/
+        /*padding-top: 20px;*/
+        /*margin-bottom: 20px;*/
+        /*margin-top: 10px;*/
+        /*box-shadow: 0px 23px 22px -25px #000;*/
+    /*}*/
+
+
+        .sort {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #DADADA;
+            background: #0E4978 none repeat scroll 0% 0%;
+            /*background: rgb(98, 108, 116) none repeat scroll 0% 0%;*/
+            box-shadow: 0px 0px 5px -2px #0B0A0A, 0px 0px 25px -18px rgb(204, 204, 204) inset;
+            border-radius: 10px;
+            color: rgb(255, 250, 156);
+            font: bold 12px Tahoma;
+            /*float: left;*/
+            /*width: 350px;*/
+        }
+
+        .boxChat p {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #6C6C6C;
+            box-shadow: 0px 0px 44px -17px #000, 0px 0px 84px 0px #222 inset;
+            border-radius: 9px;
+            color: #0D0D20;
+            font: bold 12px Tahoma;
+            background: url("https://cdn3.iconfinder.com/data/icons/glypho-music-and-sound/64/vinyl-music-note-128.png") no-repeat right bottom;
+        }
+        .boxChat i {
+            color: rgb(197, 237, 233);
+            font-size: 16px;
+        }
+        .btnDelItem,
+        .btnSubDelItem,
+        .btnSubEditItem {
+            font: normal 12px Tahoma;
+            color: #002166;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-left: 5px;
+            padding: 3px;
+        }
+        .boxChatAbout {
+            display: block;
+            position: relative;
+            letter-spacing: 1px;
+            font: 12px Tahoma;
+            width: 565px;
+            margin: 10px auto;
+        }
+        .boxChatMusic {
+            color: rgb(255, 251, 204);
+        }
+        .boxchatDateAdd {
+            /*margin-left: 5px;*/
+        }
+        .boxChatReload {
+            display: block;
+            position: absolute;
+            right: 200px;
+            top: 10px;
+            z-index: 999;
+            padding: 8px 10px;
+            border: 1px solid #DADADA;
+            background: #FFFEF2 none repeat scroll 0% 0%;
+            box-shadow: 0px 0px 7px -2px #000, 0px 0px 25px -18px #222 inset;
+            border-radius: 15px;
+            color: #2C890F;
+            font: bold 16px Tahoma;
+        }
+    .boxControl { }
+    .boxSend { width: 470px; }
+        .boxSend input,
+        .boxSend textarea {
+            font: 12px Tahoma;
+            width: 270px;
+            display: block;
+            position: relative;
+            background: transparent none repeat scroll 0% 0%;
+            border-bottom: 1px solid #333;
+            margin: 20px auto;
+            padding-left: 46px;
+        }
+
+        .boxSend p {
+            font: 12px Tahoma;
+            width: 33px;
+            display: block;
+            position: absolute;
+            background: transparent none repeat scroll 0% 0%;
+            float: left;
+            margin-top: 0px;
+            margin-left: 77px;
+        }
+        .boxSend textarea {
+            border-left: 1px solid rgb(51, 51, 51);
+        }
+
+        .btnSend,
+        .btnCheckSend {
+            cursor: pointer;
+            margin: 0px auto;
+            text-align: center;
+            position: relative;
+            display: block;
+            width: 125px;
+            padding: 6px;
+            border: 1px solid #ADADAD;
+            background: #F2EDBB none repeat scroll 0% 0%;
+            /*box-shadow: 0px 0px 5px -2px #000, 0px 0px 25px -18px #222 inset;*/
+            border-radius: 15px;
+            color: #0D0D20;
+            font: bold 10px Tahoma;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background .3s ease-out;
+        }
+            .btnSend:hover,
+            .btnCheckSend:hover {
+                background: #fff;
+            }
+
+    .boxFooter {
+        text-align: center;
+        margin: 10px 0px;
+        font: normal 10px Tahoma;
+        color: #908F8F;
+    }
+        .boxFooter a {
+            font: normal 10px Tahoma;
+            color: #908F8F;
+            text-decoration: none;
+        }
+
+    .showMsg {
+        display: none;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #DADADA;
+        background: #FFFEF2 none repeat scroll 0% 0%;
+        box-shadow: 0px 0px 5px -2px #000, 0px 0px 25px -18px #222 inset;
+        border-radius: 15px;
+        color: #0D0D20!important;
+        font: bold 12px Tahoma;
+        position: fixed;
+        z-index: 9999;
+        right: 10%;
+    }
+
+.boxCheck {
+    position: relative;
+    display: block;
+    margin: 90px auto;
+    box-shadow: 0px 0px 0px 0xp #eee;
+}
+.boxCheck,
+.boxCheckSend,
+.boxCheckSend p,
+.boxCheckSend input {
+    width: 200px;
+}
+
+.boxCheckSend input {
+    padding: 5px;
+    font: 12px Tahoma;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    margin: 0px auto;
+    display: block;
+    position: relative;
+    float: left;
+    background: none;
+}
+
+.boxCheckSend p {
+    font: 12px Tahoma;
+    margin: 0px auto;
+    display: block;
+    position: relative;
+    background: none;
+    float: left;
+    text-decoration: underline;
+}
+
+.btnSend {
+    cursor: pointer;
+    margin: 0px auto;
+    text-align: center;
+    position: relative;
+    display: block;
+    width: 125px;
+    padding: 6px;
+    border: 1px solid #ADADAD;
+    background: #F2EDBB none repeat scroll 0% 0%;
+    /*box-shadow: 0px 0px 5px -2px #000, 0px 0px 25px -18px #222 inset;*/
+    border-radius: 15px;
+    color: #0D0D20;
+    font: bold 10px Tahoma;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background .3s ease-out;
+}
+.btnSend:hover {
+    background: #fff;
+}
+..btnSaveLink{
+    float: left;
+}
+.btnChatAddLink,
+.btnSaveLink,
+.btnSaveLinkEdit {
+    cursor: pointer;
+    color: rgb(117, 153, 189);
+    /*text-decoration: underline;*/
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.add_songs {
+    padding: 5px;
+}
+.add_link {
+    padding: 5px;
+}
+
+.add_link,
+.add_songs {
+    width: 290px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 9px;
+}
+
+.btnReloadPage {
+    display: none;
+    cursor: pointer;
+    color: #C5EDE9;
+    float: right;
+    margin-top: 5px;
+}
+.btnChatAddLink {
+    /*float: left;*/
+    /*margin-right: 10px;*/
+    /*margin-top: 5px;*/
+    /*padding: 3px;*/
+    margin-right: 10px;
+    margin-top: 5px;
+    padding: 3px;
+    width: 35px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.boxChatLinks {
+    overflow: hidden;
+}
+
+.editItemTemp {
+    display: none;
+    border: 1px solid #333;
+    background: #FFF none repeat scroll 0% 0%;
+    border-radius: 10px;
+    position: fixed;
+    width: 310px;
+    z-index: 100;
+    padding: 25px;
+    margin: 15%;
+}
+.editItemTemp input {
+    border: 1px solid #333;
+}
+
+.editItemTempBgBlack {
+    background: rgba(0, 0, 0, 0.8) repeat scroll 0% 0%;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    display: none;
+    z-index: 20;
+}
+
+.editItemTempClose {
+    cursor: pointer;
+    display: block;
+    font: bold 28px Tahoma;
+    position: absolute;
+    right: 2px;
+    color: #D47F51;
+    top: -3px;
+}
+
+.btnSubEditItem ,
+.btnSubDelItem {
+    position: relative;
+    display: block;
+    float: left;
+    margin-top: -3px;
+    border-bottom: 1px solid #697A7E;
+    padding-bottom: 5px;
+}
+
+.btnEditItem {
+    display: inline-block;
+    cursor: pointer;
+    right: 75px;
+    position: absolute;
+    margin-top: 1px;
+    padding-bottom: 3px;
+    /*padding-top: 3px;*/
+}
+.btnEditItemArchive {
+    display: inline-block;
+    cursor: pointer;
+    right: 45px;
+    position: absolute;
+    margin-top: 1px;
+    padding-bottom: 3px;
+    /*padding-top: 3px;*/
+}
+
+.btnSaveLink {
+    width: 20px;
+    margin: 0 auto;
+}
+
+.btnSaveLinkEdit {
+    width: 20px;
+    margin: 0px auto;
+}
+
+.btnSubEditItem:hover,
+.btnReturnInMain:hover,
+.btnReturnInMain:hover i,
+.btnSubDelItem:hover,
+.btnSubEditItem:hover i,
+.btnSubDelItem:hover i,
+.dBlock:hover,
+.btnDelItem:hover,
+.btnDelItem:hover i,
+.btnChatAddLink:hover,
+.btnChatAddLink:hover i,
+.btnSaveLink:hover,
+.btnSaveLink:hover i,
+.btnSaveLinkEdit:hover,
+.btnEditItem:hover i,
+.btnSaveLinkEditName:hover,
+.putToArchive:hover,
+.putToArchive:hover i,
+.btnEditItemArchive:hover i {
+    background: #F0EBB9 none repeat scroll 0% 0%;
+    color: #333!important;
+    border-radius: 3px;
+}
+.rating {
+    position: absolute;
+    display: block;
+    width: 170px;
+    margin-left: 115px;
+    margin-top: -16px;
+}
+.ratingDown,
+.ratingUp {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.ratingDown { color: #FCB4B4!important; }
+.ratingUp { color: #83BD83!important; }
+
+/*text-overflow: ellipsis;*/
+/*white-space: nowrap;*/
+._rat {
+    display: inline-block;
+}
+.btnDelItem {
+    position: absolute;
+    margin-left: 210px;
+    margin-top: 0px;
+    right: 20px;
+}
+
+.putToArchive {
+    display: inline-block;
+    cursor: pointer;
+    right: 45px;
+    position: absolute;
+    margin-top: 0px;
+    padding: 3px;
+}
+.msc {
+    position: absolute;
+    color: #333 !important;
+    margin-top: -18px;
+    margin-left: -16px;
+}
+.editItemName {
+    border: 1px solid #333;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    border-radius: 10px;
+    position: fixed;
+    width: 310px;
+    z-index: 100;
+    padding: 25px;
+    display: none;
+    margin: 15%;
+}
+.itemName {
+    width: 300px;
+    border: 1px solid #333;
+    padding: 5px;
+}
+.btnSaveLinkEditName {
+    margin: 0 auto;
+    display: block;
+    width: 20px;
+    text-align: center;
+    padding: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.errors {
+    background: rgba(217, 0, 3, 0.17)!important;
+    border: 1px solid #ff3300;
+    border-bottom: 1px solid #ff3300!important;
+}
+
+.boxMenu {
+    display: block;
+    position: relative;
+    width: 150px;
+    color: #626C74;
+    margin: 13px auto;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.linkMenu {
+    display: block;
+    position: relative;
+    width: 75px;
+    float: left;
+}
+.linkMenu a:hover {
+    background: #FFFA9C;
+}
+.linkMenu a {
+    font: 12px Tahoma;
+    color: #5E676F;
+    text-decoration: none;
+    padding: 3px;
+}
+
+.btnReturnInMain {
+    display: inline-block;
+    cursor: pointer;
+    right: 45px;
+    position: absolute;
+    margin-top: 0px;
+    padding: 3px;
+}

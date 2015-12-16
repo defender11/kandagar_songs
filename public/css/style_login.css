@@ -1,0 +1,256 @@
+/*  SYSTEM */
+    * {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        border: none;
+    }
+    .ui-widget { font-size: 0.8em!important; }
+    .ui-datepicker-trigger {
+        display: block;
+        position: absolute;
+        right: 427px;
+        margin-top: -22px;
+        cursor: pointer;
+    }
+
+    .dispOn {
+        display: block!important;
+    }
+    .dispOff {
+        display: none!important;
+    }
+
+    .dBlock {
+        display: block;
+        margin-bottom: 5px;
+        float: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        /*width: 250px;*/
+        width: 90%;
+        padding-bottom: 7px;
+        border-bottom: 1px dashed #489C70;
+        /*border-bottom: 1px solid rgb(97, 150, 179);*/
+}
+/*  END SYSTEM */
+    .box,
+    .boxCheck,
+    .boxFooter {
+        display: block;
+        position: relative;
+        width: 970px;
+        margin: 15% auto;
+    }
+    .boxCheckRestore {
+        top: 40px;
+        left: 40px;
+        position: absolute;
+        width: 310px;
+        margin: 0 auto;
+        display: none;
+        overflow: hidden;
+        border: 1px solid #DADADA;
+        background: rgba(66, 53, 131, 0.64) none repeat scroll 0% 0%;
+        box-shadow: 0px 0px 5px -2px #0B0A0A, 0px 0px 25px -18px #CCC inset;
+        border-radius: 10px;
+        color: #ECC84B;
+        font: bold 12px Tahoma;
+        height: auto;
+        padding: 10px;
+        z-index: 100;
+    }
+
+    .boxCheckRestoreBtn {
+        cursor: pointer;
+        position: absolute;
+        display: block;
+        color: #FFFA9C;
+        text-transform: uppercase;
+        background: #333 none repeat scroll 0% 0%;
+        font: 14px Tahoma;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 12px;
+        top: 35px;
+        right: 25px;
+    }
+
+    .boxCheckRestoreBtn:hover {
+        background: #FFFA9C none repeat scroll 0% 0%;
+        border-bottom: 1px solid #907C7C;
+        border-right: 1px solid #907C7C;
+        box-shadow: 0px 0px 5px 1px transparent inset, 2px 2px 0px 0px rgba(0, 0, 0, 0.1);
+        color: #1BABFB;
+    }
+
+    .boxCheckRestoreBtnClose {
+        position: absolute;
+        display: block;
+        top: 5px;
+        right: 10px;
+        cursor: pointer;
+    }
+
+    .boxCheckSend {
+        width: 310px;
+        margin: 0 auto;
+        position: relative;
+        display: block;
+        overflow: hidden;
+        border: 1px solid #DADADA;
+        background: rgba(66, 53, 131, 0.64) none repeat scroll 0% 0%;
+        box-shadow: 0px 0px 5px -2px #0B0A0A, 0px 0px 25px -18px #CCC inset;
+        border-radius: 10px;
+        color: #ECC84B;
+        font: bold 12px Tahoma;
+        height: auto;
+        padding: 10px;
+    }
+
+    .boxCheckSend h2 {
+        text-align: center;
+    }
+
+    .boxCheckSend p span {
+        color: #FFFA9C;
+        margin-left: 32px;
+        letter-spacing: 1px;
+        margin-top: 1px;
+        font: bold 14px Tahoma;
+        text-shadow: 0px 0px 1px #000;
+        display: block;
+        position: absolute;
+        z-index: 10;
+    }
+
+    .btnSend,
+    .btnSendAuth {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        color: #FFFA9C;
+        text-transform: uppercase;
+        background: #333 none repeat scroll 0% 0%;
+        padding: 13px;
+        text-align: center;
+        font: 14px Tahoma;
+        border-radius: 10px;
+        margin: 0 auto;
+    }
+    .btnSend:hover,
+    .btnSendAuth:hover {
+        background: #FFFA9C;
+        color: #1BABFB;
+    }
+
+    .boxCheck input[type='password'],
+    .boxCheck input[type='text'] {
+        font: 12px Tahoma;
+        width: 250px;
+        display: block;
+        position: relative;
+        color: #FFF;
+        height: 24px;
+        border-radius: 5px;
+        background: transparent none repeat scroll 0% 0%;
+        border: 1px solid rgb(167, 182, 179);
+        margin: 32px auto;
+        padding: 10px 5px 5px;
+    }
+
+    .boxFooter a {
+        text-decoration: none;
+    }
+    .boxFooter {
+        text-align: center;
+        font: 10px Tahoma;
+        color: #2D2469;
+        text-decoration: none;
+        bottom: 1px;
+        position: fixed;
+        display: block;
+        margin: 0px;
+    }
+
+    .bg {
+        height: 100%;
+        display: block;
+        position: fixed;
+        width: 100%;
+        overflow-y: scroll;
+        background: transparent url("../img/bg.jpg") no-repeat scroll 0% 0% / cover;
+    }
+
+    .header {
+        color: #ECC84B;
+        font: bold 23px Tahoma;
+    }
+        .boxHeaderTxt {
+            float: left;
+            padding-top: 74px;
+            text-shadow: 0px 3px 2px #333;
+            position: relative;
+            text-align: center;
+            line-height: 1px;
+            width: 410px;
+            color: #1BABFB;
+        }
+        .boxHeaderTxt i {
+            color: #ECBD1A;
+        }
+            .headerTxt1 {
+                color: #FFFA9C;
+            }
+            .headerTxt2 {
+                color: #41D5E7;
+            }
+
+.boxCheckRestoreBg {
+    position: absolute;
+    background: rgb(51, 51, 51) none repeat scroll 0% 0%;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    display: none;
+    opacity: .8;
+    cursor: pointer;
+}
+
+.boxCheckRestoreBtnClose {
+    cursor: pointer;
+}
+
+.btnCheckRestoreStart {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+}
+
+.showMsgMail {
+    letter-spacing: 1px;
+    margin-top: 1px;
+    text-shadow: 0px 0px 1px #000;
+    display: none;
+    z-index: 10;
+    width: 310px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #DADADA;
+    background: rgba(66, 53, 131, 0.64) none repeat scroll 0% 0%;
+    box-shadow: 0px 0px 5px -2px #0B0A0A, 0px 0px 25px -18px #CCC inset;
+    border-radius: 10px;
+    color: #ECC84B;
+    font: bold 12px Tahoma;
+    height: auto;
+    padding: 10px;
+    left: 113px;
+}

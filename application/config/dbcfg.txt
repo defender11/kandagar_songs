@@ -1,0 +1,39 @@
+//---------------http://songs.crimea-kurort.com/---
+$active_group = 'default';
+$active_record = TRUE;
+
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'levon';
+$db['default']['password'] = 'wLy2sf4e2peTmTmu';
+$db['default']['database'] = 'songs';
+$db['default']['dbdriver'] = 'mysql';
+$db['default']['dbprefix'] = '';
+$db['default']['pconnect'] = TRUE;
+$db['default']['db_debug'] = TRUE;
+$db['default']['cache_on'] = FALSE;
+$db['default']['cachedir'] = '';
+$db['default']['char_set'] = 'utf8';
+$db['default']['dbcollat'] = 'utf8_general_ci';
+$db['default']['swap_pre'] = '';
+$db['default']['autoinit'] = TRUE;
+$db['default']['stricton'] = FALSE;
+
+//---------------http://cepaso.ru/kandagar_songs/---
+$active_group = 'default';
+$active_record = TRUE;
+
+$db['default']['hostname'] = 'localhost';
+$db['default']['username'] = 'ad_levon';
+$db['default']['password'] = 'J8w4M7j5mA';
+$db['default']['database'] = 'kandagar_songs';
+$db['default']['dbdriver'] = 'mysql';
+$db['default']['dbprefix'] = '';
+$db['default']['pconnect'] = TRUE;
+$db['default']['db_debug'] = TRUE;
+$db['default']['cache_on'] = FALSE;
+$db['default']['cachedir'] = '';
+$db['default']['char_set'] = 'utf8';
+$db['default']['dbcollat'] = 'utf8_general_ci';
+$db['default']['swap_pre'] = '';
+$db['default']['autoinit'] = TRUE;
+$db['default']['stricton'] = FALSE;

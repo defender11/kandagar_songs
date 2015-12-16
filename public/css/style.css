@@ -1,0 +1,1012 @@
+@import "helps.css";
+/*  SYSTEM */
+    * {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        border: none;
+    }
+    body {
+        box-shadow: 0px 0px 404px 457px rgb(147, 126, 255) inset;
+        background: rgba(255, 233, 108, 0.42) none repeat scroll 0% 0%;
+    }
+    .ui-widget { font-size: 0.8em!important; }
+    .ui-datepicker-trigger {
+        display: block;
+        position: absolute;
+        right: 427px;
+        margin-top: -22px;
+        cursor: pointer;
+    }
+
+    .dispOn {
+        display: block!important;
+    }
+    .dispOff {
+        display: none!important;
+    }
+
+    .dBlock {
+        display: block;
+        margin-bottom: 5px;
+        float: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        /*width: 250px;*/
+        width: 90%;
+        padding-bottom: 7px;
+        border-bottom: 1px dashed #489C70;
+        /*border-bottom: 1px solid rgb(97, 150, 179);*/
+    }
+/*  END SYSTEM */
+
+/*.bg {*/
+    /*height: 100%;*/
+    /*display: block;*/
+    /*position: fixed;*/
+    /*width: 100%;*/
+    /*background: rgba(255, 233, 108, 0.42) none repeat scroll 0% 0%;*/
+    /*overflow-y: scroll;*/
+    /*box-shadow:  0px 0px 280px 264px #937EFF inset;;*/
+/*}*/
+
+.bg {
+    height: 100%;
+    display: block;
+    position: fixed;
+    width: 100%;
+    overflow-y: scroll;
+    background: transparent url("../img/bg.jpg") no-repeat scroll 0% 0% / cover;
+}
+
+    .header {
+        display: block;
+        position: relative;
+        border: 1px solid #DADADA;
+        background: rgba(66, 53, 131, 0.64) none repeat scroll 0% 0%;
+        box-shadow: 0px 0px 5px -2px #0B0A0A, 0px 0px 25px -18px #CCC inset;
+        -webkit-box-shadow: 0px 0px 5px -2px #0B0A0A, 0px 0px 25px -18px #CCC inset;
+        -o-box-shadow: 0px 0px 5px -2px #0B0A0A, 0px 0px 25px -18px #CCC inset;
+        -moz-box-shadow: 0px 0px 5px -2px #0B0A0A, 0px 0px 25px -18px #CCC inset;
+        -ms-box-shadow: 0px 0px 5px -2px #0B0A0A, 0px 0px 25px -18px #CCC inset;
+        -khtml-box-shadow: 0px 0px 5px -2px #0B0A0A, 0px 0px 25px -18px #CCC inset;
+
+        border-radius: 10px;
+        color: #ECC84B;
+        font: bold 12px Tahoma;
+        padding: 10px;
+        overflow: hidden;
+        height: auto;
+        margin: 0px auto;
+        width: 800px;
+    }
+
+        .headerTxt1 {color: #FFFA9C;}
+        .headerTxt2 {color: #41D5E7;}
+
+    .box,
+    .boxSing,
+    .boxChat,
+    .boxControl,
+    .boxSend,
+    .boxFooter {
+        display: block;
+        position: relative;
+        width: 970px;
+        margin: 0 auto;
+    }
+
+    .box { padding: 10px; }
+    .boxHeaderTxt i {
+        color: rgb(236, 189, 26);
+    }
+    .boxHeaderTxt {
+        float: left;
+        padding-top: 17px;
+        text-shadow: 0px 3px 2px #333;
+        color: #1BABFB;
+        position: relative;
+        text-align: center;
+        line-height: 1px;
+        width: 240px;
+    }
+    .boxChat {
+        margin: 10px auto 20px;
+        display: block;
+        position: relative;
+        width: 800px;
+        height: auto;
+        padding-top: 0px;
+        /*box-shadow: 0px 23px 22px -25px #000;*/
+        overflow: hidden;
+    }
+    /*.boxChat {*/
+        /*margin: 0px auto;*/
+        /*display: block;*/
+        /*position: relative;*/
+        /*width: 650px;*/
+        /*height: 350px;*/
+        /*overflow-y: auto;*/
+        /*padding-top: 20px;*/
+        /*margin-bottom: 20px;*/
+        /*margin-top: 10px;*/
+        /*box-shadow: 0px 23px 22px -25px #000;*/
+    /*}*/
+
+
+        .sort {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #DADADA;
+            background: rgba(66, 53, 131, 0.64) none repeat scroll 0% 0%;
+            /*background: rgb(98, 108, 116) none repeat scroll 0% 0%;*/
+            box-shadow: 0px 0px 5px -2px #0B0A0A, 0px 0px 25px -18px rgb(204, 204, 204) inset;
+            border-radius: 10px;
+            color: #ECC84B;
+            font: bold 12px Tahoma;
+            position: relative;
+            display: block;
+            /*float: left;*/
+            /*width: 350px;*/
+        }
+
+        .boxChat p,
+        .boxSing p {
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid #6C6C6C;
+            box-shadow: 0px 0px 44px -17px #000, 0px 0px 84px 0px #222 inset;
+            border-radius: 9px;
+            color: #0D0D20;
+            font: bold 12px Tahoma;
+            background: url("../img/vinyl-music-note-128.png") no-repeat right bottom;
+            /*background: url("https://cdn3.iconfinder.com/data/icons/glypho-music-and-sound/64/vinyl-music-note-128.png") no-repeat right bottom;*/
+        }
+        .boxChat i,
+        .boxSing i {
+            color: rgb(231, 211, 65);
+            font-size: 16px;
+        }
+        .btnDelItem,
+        .btnSubDelItem,
+        .btnSubEditItem {
+            font: bold 12px Tahoma;
+            color: #002166;
+            text-decoration: underline;
+            cursor: pointer;
+            margin-left: 5px;
+            padding: 3px;
+        }
+        .boxChatAbout {
+            display: block;
+            position: relative;
+            letter-spacing: 1px;
+            font: 12px Tahoma;
+            width: 565px;
+            margin: 10px auto;
+        }
+        .boxChatMusic {
+            color: rgba(104, 241, 255, 0.87);
+        }
+        .boxchatDateAdd {
+            /*margin-left: 5px;*/
+        }
+        .boxChatReload {
+            display: block;
+            position: absolute;
+            right: 200px;
+            top: 10px;
+            z-index: 999;
+            padding: 8px 10px;
+            border: 1px solid #DADADA;
+            background: #FFFEF2 none repeat scroll 0% 0%;
+            box-shadow: 0px 0px 7px -2px #000, 0px 0px 25px -18px #222 inset;
+            border-radius: 15px;
+            color: #2C890F;
+            font: bold 16px Tahoma;
+        }
+    .boxControl { }
+    .boxSend {
+        padding: 10px;
+        margin-top: 10px;
+        width: 276px;
+        margin: 10px 295px auto;
+    }
+        .boxSend input,
+        .boxSend textarea {
+            font: 12px Tahoma;
+            width: 250px;
+            display: block;
+            position: relative;
+            float: left;
+            color: #fff;
+            height: 17px;
+            border-radius: 5px;
+            background: transparent none repeat scroll 0% 0%;
+            border: 1px solid #4F6165;
+            margin: 10px 5px;
+            padding: 10px 5px 5px;
+
+        }
+
+        .boxSend p {
+            font: 12px Tahoma;
+            position: relative;
+            color: rgb(255, 250, 156);
+            display: block;
+            float: left;
+        }
+        .boxSend textarea {
+            border-left: 1px solid rgb(51, 51, 51);
+        }
+
+        /*.btnSend,*/
+        .btnCheckSend {
+            cursor: pointer;
+            margin: 0px auto;
+            text-align: center;
+            position: relative;
+            display: block;
+            width: 125px;
+            padding: 6px;
+            border: 1px solid #ADADAD;
+            background: #F2EDBB none repeat scroll 0% 0%;
+            /*box-shadow: 0px 0px 5px -2px #000, 0px 0px 25px -18px #222 inset;*/
+            border-radius: 15px;
+            color: #0D0D20;
+            font: bold 10px Tahoma;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background .3s ease-out;
+        }
+            .btnSend:hover,
+            .btnCheckSend:hover {
+                background: #fff;
+            }
+
+    .boxFooter {
+        text-align: center;
+        padding: 10px 0px;
+        font: normal 10px Tahoma;
+        color: #908F8F;
+    }
+        .boxFooter a {
+            font: normal 10px Tahoma;
+            color: #2D2469;
+            text-decoration: none;
+        }
+
+    .showMsg {
+        display: none;
+        padding: 10px;
+        margin: 10px;
+        background: rgba(51, 51, 51, 0.56) none repeat scroll 0% 0%;
+        box-shadow: 0px 0px 12px 0px #000, 0px 0px 25px -18px #222 inset;
+        border-radius: 15px;
+        color: #F0EB94 !important;
+        font: bold 12px Tahoma;
+        position: fixed;
+        z-index: 9999;
+        right: 10%;
+    }
+
+.boxSendInput p {
+    /*background: #947FFF none repeat scroll 0% 0%;*/
+    z-index: 10;
+    margin-left: 10px!important;
+    letter-spacing: 1px;
+    margin-top: 0px;
+    font: bold 14px Tahoma;
+    text-shadow: 0px 0px 1px #000;
+    display: block;
+    position: absolute;
+    color: #FFFA9C;
+}
+.boxSendInput {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.boxCheck {
+    position: relative;
+    display: block;
+    margin: 90px auto;
+    box-shadow: 0px 0px 0px 0xp #eee;
+}
+.boxCheck,
+.boxCheckSend,
+.boxCheckSend p,
+.boxCheckSend input {
+    width: 200px;
+}
+
+.boxCheckSend input {
+    padding: 5px;
+    font: 12px Tahoma;
+    border-bottom: 1px solid rgb(51, 51, 51);
+    margin: 0px auto;
+    display: block;
+    position: relative;
+    float: left;
+    background: none;
+}
+
+.boxCheckSend p {
+    font: 12px Tahoma;
+    margin: 0px auto;
+    display: block;
+    position: relative;
+    background: none;
+    float: left;
+    text-decoration: underline;
+}
+
+.btnSend {
+    cursor: pointer;
+    position: absolute;
+    display: inline-block;
+    color: #FFFA9C;
+    text-transform: uppercase;
+    background: #333 none repeat scroll 0% 0%;
+    padding: 13px;
+    text-align: center;
+    font: 14px Tahoma;
+    margin: -60px auto 0px 125px;
+    right: -80px;
+    border-radius: 10px;
+}
+.btnSend:hover {
+    background: #FFFA9C none repeat scroll 0% 0%;
+    color: #1BABFB;
+    border-bottom: 1px solid #907C7C;
+    border-right: 1px solid #907C7C;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0) inset, 2px 2px 0px 0px rgba(0,0,0,0.1);
+}
+.btnSaveLink{
+    float: left;
+}
+.btnChatAddLink,
+.btnSaveLink,
+.btnSaveLinkEdit {
+    cursor: pointer;
+    color: rgb(117, 153, 189);
+    /*text-decoration: underline;*/
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.add_songs {
+    padding: 5px;
+}
+.add_link {
+    padding: 5px;
+}
+
+.add_link,
+.add_songs {
+    width: 270px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 9px;
+    float: left;
+    display: block;
+}
+
+.btnReloadPage {
+    display: none;
+    cursor: pointer;
+    color: #C5EDE9;
+    float: right;
+    margin-top: 5px;
+}
+.btnChatAddLink {
+    cursor: pointer;
+    padding: 3px;
+    position: relative;
+    margin: 5px;
+    display: block;
+    color: #ECC84B!important;
+    text-align: left !important;
+}
+.boxChatLinks {
+    overflow: hidden;
+}
+
+.editItemTemp {
+    display: none;
+    border: 1px solid #333;
+    background: #FFF none repeat scroll 0% 0%;
+    border-radius: 10px;
+    position: fixed;
+    width: 310px;
+    z-index: 100;
+    padding: 25px;
+    margin: 15%;
+}
+.editItemTemp input {
+    border: 1px solid #333;
+}
+
+.editItemTempBgBlack {
+    background: rgba(0, 0, 0, 0.8) repeat scroll 0% 0%;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    display: none;
+    z-index: 20;
+}
+
+.editItemTempClose {
+    cursor: pointer;
+    display: block;
+    font: bold 28px Tahoma;
+    position: absolute;
+    right: 2px;
+    color: #D47F51;
+    top: -3px;
+}
+
+.btnSubEditItem ,
+.btnSubDelItem {
+    position: relative;
+    display: block;
+    float: left;
+    margin-top: -3px;
+    border-bottom: 1px solid #697A7E;
+    padding-bottom: 5px;
+}
+
+.btnEditItem {
+    cursor: pointer;
+    position: relative;
+    margin: 5px;
+    display: block;
+}
+.btnEditItemArchive {
+    display: inline-block;
+    cursor: pointer;
+    right: 45px;
+    position: absolute;
+    margin-top: 1px;
+    padding-bottom: 3px;
+    /*padding-top: 3px;*/
+}
+
+.btnSaveLink {
+    display: block;
+    float: left;
+    background: #333 none repeat scroll 0% 0%;
+    padding: 5px;
+    color: #ECC84B;
+    border-radius: 5px;
+    border: 1px solid #ECC84B !important;
+    margin: 0px 0px 0px 7px;
+}
+
+.btnSaveLinkEdit {
+    width: 20px;
+    margin: 0px auto;
+}
+
+.btnAddToSing {
+    cursor: pointer;
+    position: relative;
+    margin: 5px;
+    padding: 3px;
+    display: block;
+}
+
+.btnSubEditItem:hover,
+.btnReturnInMain:hover,
+.btnReturnInMain:hover i,
+.btnAddToSing:hover,
+.btnAddToSing:hover i,
+.btnSubDelItem:hover,
+.btnSubEditItem:hover i,
+.btnSubDelItem:hover i,
+.dBlock:hover,
+.btnTrnBack:hover,
+.btnTrnBack:hover i,
+.btnDelItem:hover,
+.btnDelItem:hover i,
+.btnChatAddLink:hover,
+.btnChatAddLink:hover i,
+.btnSaveLink:hover,
+.btnSaveLink:hover i,
+.btnSaveLinkEdit:hover,
+.btnEditItem:hover,
+.btnEditItem:hover i,
+.btnSaveLinkEditName:hover,
+.putToArchive:hover,
+.putToArchive:hover i,
+.btnEditItemArchive:hover i {
+    background: #F0EBB9 none repeat scroll 0% 0%;
+    color: #333!important;
+    border-radius: 3px;
+}
+.rating {
+    position: absolute;
+    display: block;
+    width: 170px;
+    margin-left: 115px;
+    margin-top: -16px;
+}
+.ratingDown,
+.ratingUp {
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.ratingDown { color: #FCB4B4!important; }
+.ratingUp { color: #83BD83!important; }
+
+/*text-overflow: ellipsis;*/
+/*white-space: nowrap;*/
+._rat {
+    display: inline-block;
+}
+.btnDelItem {
+    position: relative;
+    margin: 5px !important;
+    color: #ECC84B!important;
+    text-decoration: none !important;
+    display: block;
+}
+
+.putToArchive {
+    cursor: pointer;
+    padding: 3px;
+    position: relative;
+    margin: 5px;
+    display: block;
+}
+.msc {
+    position: absolute;
+    color: #333 !important;
+    margin-top: -18px;
+    margin-left: -16px;
+}
+.editItemName {
+    border: 1px solid #333;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    border-radius: 10px;
+    position: fixed;
+    width: 310px;
+    z-index: 100;
+    padding: 25px;
+    display: none;
+    margin: 15%;
+}
+.itemName {
+    width: 300px;
+    border: 1px solid #333;
+    padding: 5px;
+}
+.btnSaveLinkEditName {
+    margin: 0 auto;
+    display: block;
+    width: 20px;
+    text-align: center;
+    padding: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.errors {
+    background: rgba(217, 0, 3, 0.17)!important;
+    border: 1px solid #ff3300;
+    border-bottom: 1px solid #ff3300!important;
+}
+
+.boxMenu {
+    display: block;
+    position: relative;
+    color: #626C74;
+    margin: 7px auto 13px 60px;
+    list-style-type: none;
+    overflow: hidden;
+    float: left;
+    height: 50px;
+}
+
+.link {
+    display: block;
+    overflow: hidden;
+    margin: 5px 5px 10px 5px;
+}
+
+.linkMenu {
+    position: relative;
+    float: left;
+    text-align: center;
+    padding: 10px;
+    background: #333 none repeat scroll 0% 0%;
+    margin-top: 10px;
+    border-right: 1px solid #7D7979;
+    display: inline-block;
+    border-radius: 10px 0px 0px 10px;
+}
+.linkMenu:last-child {
+    border: none;
+    -webkit-border-radius: 0px 10px 10px 0px;
+    -moz-border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 10px 10px 0px;
+}
+.linkMenu:hover {
+    background: #FFFA9C;
+    border-bottom: 1px solid #907C7C;
+    border-right: 1px solid #907C7C;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0) inset, 2px 2px 0px 0px rgba(0,0,0,0.1);
+}
+.linkMenu:hover a{
+    color: #1BABFB;
+}
+.linkMenu a {
+    font: 14px Tahoma;
+    color: #FFFA9C;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 3px;
+}
+
+.linkMenu a:hover {
+    color: #1BABFB;
+}
+
+.btnReturnInMain {
+    cursor: pointer;
+    padding: 3px;
+    display: block;
+    position: relative;
+    margin: 5px;
+}
+
+.settingBoxSongsBtn {
+    position: absolute;
+    right: 8px;
+    top: 7px;
+    display: block;
+    cursor: pointer;
+}
+
+.boxChatMusicShowTxt {
+    color: #FFBD00!important;
+    font: bold 14px Tahoma!important;
+    letter-spacing: 0px;
+}
+
+.songsMenu {
+    position: absolute;
+    border: 1px solid rgb(104, 100, 100);
+    top: 23px;
+    right: 4px;
+    border-radius: 5px;
+    display: none;
+    background: rgb(51, 51, 51) none repeat scroll 0% 0%;
+    box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.2);
+    z-index: 100;
+}
+
+
+.btnSongsMenuClose {
+    color: #ECC84B;
+    cursor: pointer;
+    border-radius: 100px;
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: -1px;
+    font: bold 12px Arial;
+    padding: 3px 6px;
+    z-index: 101;
+}
+
+.boxSing {
+    border-bottom: 4px dashed #7568A5;
+    margin-bottom: 10px;
+    margin: 10px auto 20px;
+    display: block;
+    position: relative;
+    width: 800px;
+    height: auto;
+    padding-top: 0px;
+    /*overflow: hidden;*/
+}
+
+.btnTrnBack {
+    cursor: pointer;
+    padding: 3px;
+    display: block;
+    position: relative;
+    margin: 5px;
+}
+
+.usrBar {
+    color: #FFFA9C;
+    font: bold 12px Tahoma;
+    text-align: right;
+    padding: 10px;
+    min-height: 20px;
+    min-width: 21px;
+    display: block;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+    .usrBarTxtName {
+        color: rgb(65, 213, 231);
+    }
+    .usrBarExit {
+        text-decoration: underline;
+        color: rgb(236, 189, 26);
+    }
+
+    .paggion {
+        display: block;
+        position: relative;
+        text-align: center;
+    }
+
+        .paggion a {
+            font: 12px Tahoma;
+            color: #FFFA9C;
+            text-decoration: none;
+            text-transform: uppercase;
+            position: relative;
+            text-align: center;
+            padding: 10px;
+            background: #333 none repeat scroll 0% 0%;
+            margin-top: 10px;
+            border-right: 1px solid #7D7979;
+            display: inline-block;
+            border-radius: 10px;
+        }
+
+            .paggion a:hover { background: #FFFA9C none repeat scroll 0% 0%; color: #1BABFB; }
+
+        .paggion strong {
+            color: #ECBD1A;
+        }
+
+        .usrBarTxt {
+            border-bottom: 1px solid;
+        }
+
+        .usrBarConfiguration {
+            color: #070807;
+            display: block;
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.7);
+            -moz-text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.7);
+            -webkit-text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.7);
+            -o-text-shadow: 0px 0px 5px rgba(0, 255, 255, 0.7);
+        }
+
+        .usrBarProfile,
+        .usrBarExit {
+            font: bold 10px Tahoma;
+            text-align: right;
+            color: #FFF;
+            text-decoration: none;
+            margin-right: 1px;
+        }
+
+.usrBarProfile:hover,
+.usrBarExit:hover {
+    text-decoration: underline;
+}
+
+.boxProfileSongsList_caption {
+    background: #969696;
+}
+
+.boxProfileSongsList_item {
+    background: #FFAB00;
+}
+.boxProfileSongsList li {
+    list-style-type: none;
+}
+.boxProfileSongsList {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 600px;
+}
+
+.boxProfileSongsBoxTxt {
+    display: block;
+    position: relative;
+    width: 120px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #333;
+}
+.boxProfileSongsBoxTxt:hover {
+    background: #f3f3f3;
+}
+
+.profileUsrName {
+    color: #D8D8D8;
+    display: block;
+    position: relative;
+    font: bold 46px Tahoma;
+    text-transform: uppercase;
+    padding: 10px 0px;
+    margin: 46px 15px -5px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.51);
+    float: left;
+}
+
+.boxProfile input[type='text'],
+.boxProfile input[type='email'],
+.boxProfile input[type='password'] {
+    font: 12px Tahoma;
+    width: 250px;
+    display: block;
+    position: relative;
+    color: #00145C;
+    height: 17px;
+    border-radius: 5px;
+    background: transparent none repeat scroll 0% 0%;
+    border: 1px solid #4F6165;
+    margin: 10px 5px;
+    padding: 10px 5px 5px;
+}
+
+.profileChgPassBtn:hover,
+.profileSaveEmailBtn:hover {
+    background: #FFFA9C none repeat scroll 0% 0%;
+    border-bottom: 1px solid #907C7C;
+    border-right: 1px solid #907C7C;
+    box-shadow: 0px 0px 5px 1px transparent inset, 2px 2px 0px 0px rgba(0, 0, 0, 0.1);
+    color: #1BABFB;
+}
+
+.profileChgPassBtn,
+.profileSaveEmailBtn{
+    cursor: pointer;
+    position: relative;
+    color: #FFFA9C;
+    text-transform: uppercase;
+    background: #333 none repeat scroll 0% 0%;
+    font: 14px Tahoma;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 13px;
+}
+
+.boxSquareOrange {
+    background: #FFAB00;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 1px solid #333;
+}
+
+.boxSquareGreen {
+    background: #8FBC8F;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border: 1px solid #333;
+}
+
+.boxProfileSongsBox {
+    display: none;
+    position: relative;
+    width: 600px;
+}
+
+.boxProfileAttentionRestorePasswrd {
+    color: #000;
+    font: normal 11px Tahoma;
+    display: block;
+    position: relative;
+    margin-top: -7px;
+    margin-left: 5px;
+}
+
+.profileSaveEmailBtn {
+    position: absolute;
+    z-index: 20;
+    margin-left: 233px;
+    padding: 8px 11px;
+    margin-top: 10px;
+}
+
+.profileChgPassBtn {
+    position: absolute;
+    z-index: 20;
+    margin-left: 233px;
+    padding: 8px 11px;
+    margin-top: 10px;
+}
+
+.h4Header {
+    color: #333;
+}
+
+.boxProfileAttentionNewSong {
+    cursor: pointer;
+}
+
+.boxAvatarUpload {
+    display: none;
+    position: absolute;
+    padding:20px 20px;
+    background: rgba(66, 53, 131, 0.64) none repeat scroll 0% 0%;
+    box-shadow: 0px 0px 5px -2px #0B0A0A, 0px 0px 25px -18px #CCC inset;
+    border-radius: 10px;
+    margin-top: 20px;
+    z-index: 200;
+    border: 1px solid #DADADA;
+}
+
+.boxAvatarControl img {
+    box-shadow: 0px 0px 5px -2px #0B0A0A, 0px 0px 25px -18px #CCC inset;
+    border-radius: 10px;
+}
+.boxAvatarControl {
+    display: block;
+    position: relative;
+    width: 100px;
+    float: left;
+    border-radius: 10px;
+
+    /*cursor: pointer;*/
+}
+
+.avatarBody {
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    /*border-radius: 10px;*/
+}
+.avatarBodyAdd {
+    position: absolute;
+    display: block;
+    text-align: center;
+    width: 100px;
+    bottom: 0;
+    height: 20px;
+    background: #333;
+    opacity: .7;
+    cursor: pointer;
+    color: #fff;
+    font: normal 12px/20px Arial, sans-serif;
+    border-radius: 0px 0 10px 10px;
+}
+
+.avatarBodyAdd:hover {
+    background: #000;
+    color: #E7D341;
+    filter: drop-shadow(0px 0px 2px rgba(0,0,0,.5));
+}
+
+.avatarBodyClose,
+.boxAvatarUploadClose {
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    cursor: pointer;
+}
+.boxAvatarUploadClose { right: 8px; }
+
+.avatarBodyClose i:hover,
+.boxAvatarUploadClose i:hover {
+    color: #E7D341;
+    filter: drop-shadow(0px 0px 2px rgba(0,0,0,.5));
+}
+.boxAvatarUploadClose i,
+.avatarBodyClose i {
+    color: #fff;
+}
